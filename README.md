@@ -101,6 +101,13 @@ $4 ~ /linux/ | If fourth element matched linux, then true
 $5 !~ /awk/ | If fifth element does not matched awk, then true
 $2/$3 >= 0.5 | If second element divided by thrid element is greater or equal to 0.5, then true
 
+String-Matching Patterns
+1. /regex/ : implies "$0 ~" meanings matching the entire current input line whether it contain a substring that matches by regex.
+1. expression ~ /regex/ : Matches if the string value of expression contains a substring matched by regex.
+1. expression !~ /regex/ : Matches if the string value of expression does not contain a substring matched by regex.
+
+Any expression may be used in place of /regex/ in the context of \~ and \!~.
+
 
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
