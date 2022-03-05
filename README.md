@@ -248,5 +248,18 @@ Types
 
 Types will be automatically coerced when needed.
 
+User Define Functions
+
+```bash
+awk 'BEGIN{function add_three (number){return number + 3}}' '{print add_three(36)}'
+```
+
+Some weird awk stuff
+```bash
+# What is this? It remove leading space...
+awk '{$1=$1}1' file.txt
+# Another way to write it
+awk '{$1=$1}; {print}' file.txt
+```
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
