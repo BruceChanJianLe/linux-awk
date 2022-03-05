@@ -26,5 +26,18 @@ This repository demonstrate the usage of awk command in Linux.
 
 [wiki](https://en.wikipedia.org/wiki/AWK)
 
+## History of awk
+
+Before Awk:
+- Was preceded by sed, which was the scripting part of ed
+- sed was the first powerful regex tool
+- Used main loop and current line variables (awk expanded on this)
+- awk was an evolution in the sed line-oriented approach
+
+After Awk:
+- awk's powerful regexes and also its limitations inspired Perl
+- Perl in turn inspired beautiful languages like Ruby which inspired Elixir
+- We have a lot to thank awk for! :D
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
