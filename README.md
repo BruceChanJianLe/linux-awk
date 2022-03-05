@@ -135,5 +135,31 @@ string-matching | /Asia/ | line that contain Asia
 compound | $3 < 100 && $4 == "Asia" | lines in which third field is less than 100 and fourth field is Aisa
 range | NR==10, NR==20 | tenth to twentieth lines of input inclusive
 
+### Action
+
+- Executed if the pattern matches (if there was no pattern)
+- Are much like a typical language (such as C)
+- Have access to a number of built in variable
+- Can create variables or call functions (such as print)
+- Parenthesis in function calls are optional
+- Can override fields or create new fields
+
+The statements in actions can include: expressions, with constants, variables, assignements, function calls, etc.
+1. print : expression-list
+1. printf : format, expression-list
+1. if (expression) statement
+1. if (expression) statement else statement
+1. while (expression) statement
+1. for (expression; expression; expression) statement
+1. for (variable in array) statement
+1. do statement while (expression)
+1. break
+1. continue
+1. next
+1. exit
+1. exit expression
+1. {statements}
+
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
