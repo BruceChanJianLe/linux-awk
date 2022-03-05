@@ -178,5 +178,27 @@ RS | controls the input records separator | "\n"
 RSTART | start of string matched by match function | - 
 SUBSEP | subscript separator | "\034"
 
+Examples
+```bash
+# Print number of fields (columns)
+awk '{print NF}'
+```
+
+```bash
+# Print number of lines read (basically line numbers)
+awk '{print NR, $0}'
+```
+
+```bash
+# Print number of fields (columns)
+awk '{print $1 "makes" $3 "per hour"}'
+# or
+awk '{printf("%s makes $%.2f per hour\n", $1, $3)}'
+
+# Combine with other tools like sort and uniq
+awk '{print $1 "makes" $3 "per hour"}' | sort -nk 3
+awk '{print $1 "makes" $3 "per hour"}' | uniq -f 2
+```
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
