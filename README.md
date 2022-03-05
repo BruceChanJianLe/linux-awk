@@ -160,6 +160,23 @@ The statements in actions can include: expressions, with constants, variables, a
 1. exit expression
 1. {statements}
 
+Variables
+Variable | Meaning | Default Value
+--- | --- | ---
+ARGC | number of command-line arguments | -
+ARGV | array of command-line arguments | -
+FILENAME | name of current input file | -
+FNR | record number in current file | -
+FS | controls the input field separator | " "
+NF | number of fields in current record | -
+NR | number of records read so far (across all files) | -
+OFMT | output format for numbers | "%.6g"
+OFS | output field separator | " "
+ORS | output record separator | "\n"
+RLENGTH | length of string matched by match function | -
+RS | controls the input records separator | "\n"
+RSTART | start of string matched by match function | - 
+SUBSEP | subscript separator | "\034"
 
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
