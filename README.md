@@ -262,4 +262,5 @@ awk '{$1=$1}1' file.txt
 awk '{$1=$1}; {print}' file.txt
 ```
 ## Reference
-- [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
+- [link1](https://www.youtube.com/watch?v=43BNFcOdBlY)
+- [link2](https://www.youtube.com/watch?v=4UGLsRYDfo8&t=0s)
