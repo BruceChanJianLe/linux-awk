@@ -73,5 +73,34 @@ awk 'BEGIN{print "Hello, world!"}'
 - If True, execute the following Action
 - If False, skip the action and proceed to test the next pattern with current line
 
+1. BEGIN {statements}: The *statements* are executed once before any input has been read.
+1. END {statements}: The *statements* are executed once after all input has been read.
+1. expression {statements}: The *statments* are executed at each input line where the *expression* is true, that is, nonzero or nonnull.
+1. /*regular expression*/ {statements}: The *statements* are executed at each input line that contains a string matched by the *regular expression*.
+1. *compound pattern* {*statements*}: A compound pattern combines expressions with && (AND) , || (OR), ! (NOT), and parenthese; the *statements* are executed at each input line where the *compound pattern* is true.
+1. pattern_1, pattern_2 {*statements*}: A range pattern matches each input line from a line matched by *pattern_1* to the next line matched by *pattern_2*, inclusive; the *statments* are executed at each matching line.
+
+COMPARISON OPERATORS
+Operator | Meaning
+--- | ---
+< | less than
+<= | less than or equal to
+== | equal to
+!= | not equal to
+\>= | greater than or equal to
+\> | greater than
+~ | matched by
+!~ | not matched by
+
+Examples | Explanation
+--- | ---
+NF < 10 | If number of Fields is less than 10, then true
+NR <= 150 | If number records so far is less than or equal to 150, then true
+$1 == "SomeString" | If first element is equal to SomeString, then true
+$4 ~ /linux/ | If fourth element matched linux, then true
+$5 !~ /awk/ | If fifth element does not matched awk, then true
+$2/$3 >= 0.5 | If second element divided by thrid element is greater or equal to 0.5, then true
+
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
