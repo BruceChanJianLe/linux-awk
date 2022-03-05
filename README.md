@@ -108,6 +108,24 @@ String-Matching Patterns
 
 Any expression may be used in place of /regex/ in the context of \~ and \!~.
 
+Escape Sequences
+Sequence | Meaning
+--- | ---
+\b | backspace
+\f | formfeed
+\n | newline (line feed)
+\r | carriage return
+\t | tab
+\ddd | octal value ddd, where ddd is 1 to 3 digits between 0 and 7
+\c | any other character c literally (e.g. \\ for backslash, \" for ")
+
+Range Patterns
+
+- A range pattern consists of two patterns separated by a comma
+- A range pattern matches each line between an occurrence of pattern 1 and the next occurrence of pattern 2 inclusive
+- If no instance of the second pattern is subsequently found, then all lines to the end of the input are matched
+
+
 
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
