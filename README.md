@@ -213,5 +213,34 @@ sin(x) | sine of x, with x in radians
 sqrt(x) | square root of x
 srand(x) | x is new seed for rand()
 
+String Functions
+Function | Description
+--- | ---
+gsub(r,s) | substitue s for r globally in $0, return number of substitutions made
+gsub(r,s,t) | substitue s for r globally in string t, return number of substitutions made
+index(s,t) | return first position of string t in s, or 0 if t is not present
+length(s) | return number of characters s
+match(s,r) | test whether s contains a substring matched by r, return index or 0; sets RSTART and RLENGTH
+split(s,a) | split s into array a on FS, return number of fileds
+split(s,a,fs) | split s into array a on field separator fs, return number of fields
+sprintf(fmt, expr-list) | return expr-list formatted according to format string fmt
+sub(r,s) | substitute s for the leftmost longest substring of $0 matched by r; return number of substitutions made
+sub(r,s,t) | substitute s for the left most longest substring of t matched by r; return number of substitutions made
+substr(s,p) | return suffix of s starting at position p
+substr(s,p,n) | return substring of s of length n starting at position p
+
+Examples
+```bash
+# Globally substitute USA with United States
+awk '{gsub(/USA/, "United States"); print}'
+awk 'X = sprintf("%10s, %6d", $1, $2)'
+# Change banana to bandana
+awk 'gsub(/ana/, "anda", "banana")'
+# Combine $2$3 together and print out
+awk 'print $2 $3'
+# Separate and print out
+awk 'print $2, $3'
+```
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
