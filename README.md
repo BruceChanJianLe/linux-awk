@@ -242,5 +242,11 @@ awk 'print $2 $3'
 awk 'print $2, $3'
 ```
 
+Types
+- Strings: "String literal"
+- Numbers: +1 1. 0 1e0 0. 1e+ 1 10E-a 001
+
+Types will be automatically coerced when needed.
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
