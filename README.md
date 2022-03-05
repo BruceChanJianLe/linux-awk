@@ -54,5 +54,24 @@ awk 'BEGIN{print "Hello, world!"}'
 - some_program | awk 'program'
 - #!/usr/bin/env awk -f -> ./script.awk *.log
 
+### Structure of an awk program
+
+- pattern -> {action}
+- awk scans a sequence of input lines one after another searching for lines that are matched.
+- Every input line is tested against each pattern in turn
+- For each match, the {action} is executed
+- After every applicable {action} is executed, the next line is processed
+- Action are enclosed in braces to distinguish them frmo the pattern
+- Either the pattern or the action can be omitted
+    - If the pattern is omitted, every line will match '{print $1}'
+    - If the action is omitted, every matching line will be printed '/regex/'
+
+### Awk patterns
+
+- awk patterns are basically just "if" statements to decide to execute the action
+- Decide if a match is True or False
+- If True, execute the following Action
+- If False, skip the action and proceed to test the next pattern with current line
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
