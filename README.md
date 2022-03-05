@@ -39,5 +39,20 @@ After Awk:
 - Perl in turn inspired beautiful languages like Ruby which inspired Elixir
 - We have a lot to thank awk for! :D
 
+## Usage
+
+### Hello World
+
+```bash
+awk 'BEGIN{print "Hello, world!"}'
+```
+
+### Running an awk program
+
+- awk 'program' input files
+- awk -f progfile *input files*
+- some_program | awk 'program'
+- #!/usr/bin/env awk -f -> ./script.awk *.log
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
