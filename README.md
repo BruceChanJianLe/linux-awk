@@ -200,5 +200,18 @@ awk '{print $1 "makes" $3 "per hour"}' | sort -nk 3
 awk '{print $1 "makes" $3 "per hour"}' | uniq -f 2
 ```
 
+Math Functions
+Function | Value Returned
+--- | ---
+atan2(y,x) | arctangent of y/x in the range of -PI to PI
+cos(x) | cosine of x, with x in radians
+exp(x) | exponential function of x, e^x
+int(x) | integer part of x; truncated towards 0 when x > 0
+log(x) | natural (base e) logarithm of x
+rand() | random number r, where 0 <= r < 1
+sin(x) | sine of x, with x in radians
+sqrt(x) | square root of x
+srand(x) | x is new seed for rand()
+
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
