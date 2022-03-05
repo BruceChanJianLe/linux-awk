@@ -125,7 +125,15 @@ Range Patterns
 - A range pattern matches each line between an occurrence of pattern 1 and the next occurrence of pattern 2 inclusive
 - If no instance of the second pattern is subsequently found, then all lines to the end of the input are matched
 
-
+Summary
+Pattern | Example | Matches
+--- | --- | ---
+BEGIN | BEGIN | before any input has been read
+END | END | after all input has been read
+expression | $3 < 100 | line in which field is less than 100
+string-matching | /Asia/ | line that contain Asia
+compound | $3 < 100 && $4 == "Asia" | lines in which third field is less than 100 and fourth field is Aisa
+range | NR==10, NR==20 | tenth to twentieth lines of input inclusive
 
 ## Reference
 - [link](https://www.youtube.com/watch?v=43BNFcOdBlY)
